@@ -42,7 +42,10 @@ jobs:
     - name: Build with PyInstaller (Linux)
       if: runner.os == 'Linux'
       run: |
-        pyinstaller --noconfirm --onefile --windowed --name "QueueClip" --add-data "queueclip:queueclip" run.py
+        pyinstaller --noconfirm --onefile --windowed --name "QueueClip" \
+          --hidden-import "pynput.keyboard._xorg" \
+          --hidden-import "pynput.mouse._xorg" \
+          --add-data "queueclip:queueclip" run.py
 
     - name: Build with PyInstaller (Windows)
       if: runner.os == 'Windows'
