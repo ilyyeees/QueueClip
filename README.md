@@ -43,6 +43,19 @@ Even with the standalone executable, you need to install `xdotool` and a clipboa
 sudo apt install xdotool xclip
 ```
 
+### Launching on Linux
+After downloading, you may need to make the file executable:
+
+1.  Open your terminal in the download folder.
+2.  Run:
+    ```bash
+    chmod +x QueueClip
+    ```
+3.  Launch it:
+    ```bash
+    ./QueueClip
+    ```
+
 ## Running from Source (For Developers)
 
 If you prefer to run the Python code directly:
